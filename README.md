@@ -45,34 +45,17 @@ Can any meaningful data related to addresses be gotten from live audio feed?
 
 ## Executive Summary
 
-“To know even one life has breathed easier because you have lived. This is to have succeeded.” – Ralph Waldo Emerson
+*“To know even one life has breathed easier because you have lived. This is to have succeeded.” – Ralph Waldo Emerson  
+"Prepared. Responsive. Committed." - FEMA Motto*
 
-"Prepared. Responsive. Committed." - FEMA Motto
-
-*The executive summary needs to be persuasive and highlight the benefits of your company/product/service, rather than being descriptive and focusing on the features. You can save the features for the body of the proposal.*
-
-*The Opener: Capture their attention*
 
 August 29, 2005, Hurrican Katrina slams into the shores of the United States, leaving a wake of devastation.  To compound the issue, poorly constructed levees along the shores of Louisiana give way to rising water, and entire sections of the city of New Orleans are left under water.  Sadly, as rain falls and water levels rise, hundreds of people loose there lives.  
 
 During this tragic event, emergency responders were left with the task of attending to would be victims, while simultaneously struggling to find those who needed assistance.  Project Red Siren successfully lays the foundation needed to expand the resources available to FEMA when attempting to find people needing immediate assistance.  It specifically addresses the question, is this radio chatter from first responders and dispatchers an emergency?  While this question is not deep enough on its own to answer the full problem statement, the model produced is quite accurate, making it a solid starting point for further investigations.
 
-To be precise, the model uses various properties of sound waves to isolate tones, inflections, and other parts of speech that become more pronounced when people are put under stress or duress.  Yes, they are emergency responders and dispatchers, trained to keep their composure in tough situations.  This fact is one of the most remarkable things about the model Project Red Siren has produced.  The differences, although subtle, are nevertheless present; and the precision of the computer makes exposing them possible.
+To be precise, the model uses various properties of sound waves to isolate tones, inflections, and other parts of speech that become more pronounced when people are put under stress or duress.  Yes, they are emergency responders and dispatchers, trained to keep their composure in tough situations.  This fact is one of the most remarkable things about the model Project Red Siren has produced.  The differences, although subtle, are nevertheless present; and the precision of the computer makes exposing them possible.  
 
-*The Call to Action: Let’s do it*
-
-*Don't do this*
- - Don’t make it too long
- - Don’t use jargon
- - Don’t use overly technical language
- - Don’t talk about your company history
- 
-*Do this*
- - Do focus on your client
- - Do mention your client’s company name
- - Do use plain language
- - Do proofread and edit
-
+The model that was produced during Red Siren predicted with 98% accuaracy on new data.  This was 14 missclassifications out of 700 trails.  So, 
 
 ---
 
