@@ -39,50 +39,50 @@ Can any meaningful data related to addresses be gotten from live audio feed?
 
 ## Data Dictionary
 
+<p align="left"> 
+    
+|Feature (Bin #)|Description|
+|---|---|
+file_name|Name of .wav Audio File
+class|Emergency or Non-Emergency
+emergency_type|Description of Situation
+origin|Broadcastify or YouTube
+good_exception|Whether or not Speech Detection API detected audio or not
+audio_recognition|Speech-to-Text of the Audio Clip
+tempogram_#|Tempo
+spectral_contrast_#|Spectral Contrast
+chroma_cens_#|Chroma Feature Normalized
+spectral_centroid|Spectral Centroid
+spectral_band|Spectral Bandwidth
+spectral_flat|Spectral Flatness
+rolloff|Spectral Rolloff
+chroma_cqt_#|Chroma Continuous Q Transform
+tonnetz_#|Tonnetz
+contrast_#|Spectral Contrast
+mel_#|Mel Scale
+chroma_stft_#|Chroma Short Time Fourier Transform
+mfcc_#|Mel Frequency Cepstrum
+preds|Model Prediction of Class
+
+</p>
+
 ---
 
 <a id='executive-summary'></a>
 
 ## Executive Summary
 
-“To know even one life has breathed easier because you have lived. This is to have succeeded.” – Ralph Waldo Emerson
+*“To know even one life has breathed easier because you have lived. This is to have succeeded.” – Ralph Waldo Emerson  
+"Prepared. Responsive. Committed." - FEMA Motto*
 
-"Prepared. Responsive. Committed." - FEMA Motto
 
-*The executive summary needs to be persuasive and highlight the benefits of your company/product/service, rather than being descriptive and focusing on the features. You can save the features for the body of the proposal.*
-
-*The Opener: Capture their attention*
-
-August 29, 2005, Hurrican Katrina slams into the shores of the United States, leaving a wake of devastation.  To compound the issue, poorly constructed levees along the shores of Louisiana give way to rising water, and entire sections of the city of New Orleans are left under water.  Sadly, as rain falls and water levels rise, hundreds of people loose there lives.  
+August 29, 2005, Hurrican Katrina slams into the shores of the United States, leaving a wake of devastation.  To compound the issue, poorly constructed levees along the shores of Louisiana are overpowered, and entire sections of the city of New Orleans are left submerged under water.  As rain falls and water levels rise, people everywhere find themselves in dire situations, trapped in buildings, on rooftops, and ultimately stuck in ways they cannot evade.  Sadly, hundreds of people loose there lives.  
 
 During this tragic event, emergency responders were left with the task of attending to would be victims, while simultaneously struggling to find those who needed assistance.  Project Red Siren successfully lays the foundation needed to expand the resources available to FEMA when attempting to find people needing immediate assistance.  It specifically addresses the question, is this radio chatter from first responders and dispatchers an emergency?  While this question is not deep enough on its own to answer the full problem statement, the model produced is quite accurate, making it a solid starting point for further investigations.
 
-To be precise, the model uses various properties of sound waves to isolate tones, inflections, and other parts of speech that become more pronounced when people are put under stress or duress.  Yes, they are emergency responders and dispatchers, trained to keep their composure in tough situations.  This fact is one of the most remarkable things about the model Project Red Siren has produced.  The differences, although subtle, are nevertheless present; and the precision of the computer makes exposing them possible.
+To be precise, the model uses various properties of sound waves to isolate tones, inflections, and other parts of speech that become more pronounced when people are put under stress or duress.  Yes, they are emergency responders and dispatchers, trained to keep their composure in tough situations.  This fact is one of the most remarkable things about the model Project Red Siren has produced.   The differences, although subtle, are nevertheless present; and the precision of the computer classified emergencies with 98% accuaracy on new data. 
 
-*The Call to Action: Let’s do it*
-
-*Don't do this*
- - Don’t make it too long
- - Don’t use jargon
- - Don’t use overly technical language
- - Don’t talk about your company history
- 
-*Do this*
- - Do focus on your client
- - Do mention your client’s company name
- - Do use plain language
- - Do proofread and edit
-
-
----
-
-<a id='next-steps'></a>
-
-## Future iterations/next steps
-
-During Project Red Siren, several challenges were revealed, which are now considered.  First, and most pronounced, is the fact that the model is not now producing any address information.  There are two big hurdles in this domain, that of the inconsistencies involved with how addresses are communicated, and also the ability to obtain clear enough streaming audio to get meaningful text extraction.  In the former, some work was done.  We refer to the [Proof of concept](https://github.com/project-red-siren-dsi-chi-cc7/deliverables/blob/master/Proof%20of%20concept.ipynb) notebook, which outlines in more detail a potential larger workflow useful in tackling the main problem.  
-
-A few highlights of the aforementioned proposed workflow.  It incorporates criterion to address the question, how much text data should the machine store when receiving text from live audio?  It also incorporates deep learning into its scope, and briefly mentions the importance of periodic updating of the model to maintain training data on recent new incoming data.
+This accuracy was from the beginning amazing to us.  It is a great foundation for further work toward a more robust system that will assist FEMA in determining relevant locations from policy scanner radio broadcasts.  
 
 ---
 
@@ -90,7 +90,19 @@ A few highlights of the aforementioned proposed workflow.  It incorporates crite
 
 ## Known Issues
 
-One noteworthly challenge, there are many features which [LibRosa](https://librosa.github.io/librosa/index.html), the primary tool used to create visuals from the sound, can take measurements on and return.  These can get a bit technical.  Please see [EDA_and_modeling](https://github.com/project-red-siren-dsi-chi-cc7/deliverables/blob/master/EDA_and_modeling.ipynb#Audio-features) for a more thorough consideration of the features from LiBrosa.  
+During Project Red Siren, several challenges were revealed, which are significant in future considerations.  First, and most pronounced, the model is not now producing any address information.  There are two big hurdles in this domain, that of the inconsistencies involved with how addresses are communicated, and also the ability to obtain clear enough streaming audio to get meaningful text extraction.  In the former, a small amount of work was done.  Ultimately, this is where the most significant amount of work still exists in getting a model completely to production.  Future iterations/next steps should focus heavily in this area.  Project Red Siren can say that there is a great source already in existence, [Google Cloud's speech-to-text](https://cloud.google.com/speech-to-text/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-b-dr-1006141&utm_content=text-ad-none-any-DEV_c-CRE_113193385807-ADGP_Hybrid+%7C+AW+SEM+%7C+SKWS+%7C+US+%7C+en+%7C+BMM+~+Speech+API-KWID_43700009979724579-kwd-141369776212&utm_term=KW_%2Bcloud%20%2Bspeech-ST_%2Bcloud+%2Bspeech&gclid=CjwKCAjwtYXmBRAOEiwAYsyl3BrJXG-Nw448eS7nRbqbMMM1s5FBhT7WgNCzbdbDye2Qd_OHCTfwohoCZ68QAvD_BwE).  But, their domain API is not available without a cost, which was outside of the realm of the resources available for Project Red Siren.  
+
+Another noteworthly challenge, there are many features which [LibRosa](https://librosa.github.io/librosa/index.html), the primary tool used to create visuals from the sound, can take measurements on and return.  These can get a bit technical.  Please see [EDA_and_modeling](https://github.com/project-red-siren-dsi-chi-cc7/deliverables/blob/master/EDA_and_modeling.ipynb#Audio-features) for a more thorough consideration of the LiBrosa features.
+
+---
+
+<a id='next-steps'></a>
+
+## Future iterations/next steps
+
+Pushing Project Red Siren further, as mentioned above, there is a desperate need for work in the realm of speech to text.  We refer to the [Proof of concept](https://github.com/project-red-siren-dsi-chi-cc7/deliverables/blob/master/Proof%20of%20concept.ipynb) notebook, which outlines in more detail a potential large scale workflow useful in tackling the main problem.  
+
+A few highlights of this proposed workflow, it incorporates criterion to address the question, how much text data should the machine store when receiving text from live audio?  It also incorporates deep learning into its scope, and briefly mentions the importance of periodic updating of the model to maintain training data on newly acquired incoming data.
 
 ---
 
